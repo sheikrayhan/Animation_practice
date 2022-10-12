@@ -1,0 +1,234 @@
+/* Common   CSS Start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: rgb(0, 255, 115);
+    padding-bottom: 20px;
+}
+/* Common   CSS End */
+
+/* Google Map Section CSS Start */
+#google{
+    position: relative;
+}
+iframe{
+    width: 100%;
+    height: 500px;
+}
+.contact_form{
+    position: absolute;
+    width: 300px;
+    /* height: 300px; */
+    /* color: black; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact_form h2{
+    text-align: center;
+}
+.contact_form input{
+    display: block;
+    width: 100%;
+    color: aquamarine;
+    background-color: black;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+/* Google Map Section CSS End */
+
+/* Animation Section CSS Start */
+#anm .animation{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+#anm .animation .round_animation{
+    width: 50%;
+    
+}
+#anm .animation .line_animation{
+    width: 50%;
+}
+#anm .animation .round_animation .r_animation{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border: 5px solid aqua;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    
+    animation-name: preloader;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes preloader {
+    
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#anm .animation .line_animation .l_animation span{
+    display: inline-block;
+    width: 2px;
+    height: 200px;
+    background-color: red;
+    margin: 0 20px;
+    animation-name: line_preloader;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: right;
+}
+#anm .animation .line_animation .l_animation span:nth-child(1){
+    animation-delay: 0.2s;
+    background-color: red;
+}
+#anm .animation .line_animation .l_animation span:nth-child(2){
+    animation-delay: 0.4s;
+    background-color: yellow;
+}
+#anm .animation .line_animation .l_animation span:nth-child(3){
+    animation-delay: 0.6s;
+    background-color: orange;
+}
+#anm .animation .line_animation .l_animation span:nth-child(4){
+    animation-delay: 0.8s;
+    background-color: black;
+}
+#anm .animation .line_animation .l_animation span:nth-child(5){
+    animation-delay: 1s;
+    background-color: green;
+}
+
+@keyframes line_preloader {
+    from {
+        transform: scaleY(1)
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+/* Animation Section CSS End */
+/* Img Round Section CSS Start */
+#Img .img_round{
+    margin: 30px 0px;
+}
+#Img .img_round img{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;   
+}
+/* Img Round Section CSS End */
+/* Flat Preloader Section CSS Start */
+#preloader{
+    background-color: aquamarine;
+    position: relative;
+    height: 500px;
+}
+#preloader h1{
+    color: #193B48;
+}
+.load{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100px;
+    height:100px;
+}
+.load span{
+    border:0;
+    margin:0;
+    width:40%;
+    height:40%;
+    position:absolute;
+    border-radius:50%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.load :first-child{
+    background:#19A68C;
+    animation-delay:0.5s
+}
+.load :nth-child(2){
+    background:#F63D3A;
+    animation-delay:1s
+}
+.load :nth-child(3){
+    background:#FDA543;
+    animation-delay:1.5s
+}
+.load :last-child{
+    background:#193B48
+}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(150%)}
+  50%{transform:translate(150%, 150%)}
+  75%{transform:translate(0, 150%)}
+
+  /* 20%{transform:translate(260%)}
+  40%{transform:translate(260%, 260%)}
+  60%{transform:translate(260%, 260%, 260%)}
+  80%{transform:translate(0, 260%)} */
+}
+/* Flat Preloader Section CSS End */
+
+
+/* Neomorphism Section CSS Start */
+#neomorphism{
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(145deg, #798688, #B1C4C6);
+    position: relative;
+}
+#neomorphism .neomor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(145deg, #768385, #B4C7C9);
+    border-radius: 15%;
+    box-shadow: 13.21px 13.21px 15px #687475, -13.21px -13.21px 15px #C2D7D9;
+    
+}
+#neomorphism .neomor .phism h3{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color: #FFFFFF;
+    /* background: #232323; */
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+/* Neomorphism Section CSS End */
